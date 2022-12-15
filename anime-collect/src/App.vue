@@ -1,6 +1,6 @@
 
 <template>
-  <div class="w-full min-h-screen bg-gray-800">
+  <div class="w-full min-h-screen bg-main-dark-300">
     <MainImages></MainImages>
   </div>
 </template>

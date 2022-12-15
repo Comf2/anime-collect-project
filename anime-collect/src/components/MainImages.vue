@@ -1,9 +1,4 @@
 <template>
-  <button
-      class="w-20 aspect-square bg-amber-200"
-      >
-    this is a button {{colAmount}}
-  </button>
   <div
       id="image-container"
       class="w-full px-5 flex justify-center">
@@ -18,12 +13,13 @@
             :src="`${image}`"
             alt=""
             class="rounded-[inherit] group-hover:brightness-50"
+            loading="lazy"
         >
         <div
-            class=" hidden w-full h-full absolute p-7 top-0 flex-col items-end justify-between group-hover:flex "
+            class=" hidden w-full h-full absolute p-9 top-0 flex-col items-end justify-between group-hover:flex "
             >
               <button
-                class="bg-amber-200 px-5 py-3 rounded-full ">
+                class="bg-main-blue-300 px-5 py-3 rounded-full hover:bg-main-blue-400 main-button">
                 Add
               </button>
               <div
@@ -31,14 +27,14 @@
                   class="flex justify-around gap-2"
               >
                 <button
-                    class="w-7 aspect-square p-3 bg-white rounded-full"
+                    class="p-3 bg-white rounded-full aspect-square grid place-items-center main-button"
                 >
-
+                  <font-awesome-icon icon="fa-solid fa-arrow-up-from-bracket" />
                 </button>
                 <button
-                    class="w-7 aspect-square p-3 bg-white rounded-full"
+                    class="p-3 bg-white rounded-full aspect-square grid place-items-center main-button"
                 >
-
+                  <font-awesome-icon icon="fa-solid fa-ellipsis" />
                 </button>
               </div>
         </div>
@@ -50,16 +46,8 @@
   </div>
 
 </template>
-<style>
-.image-hover-content:before{
-  content:'';
-  position: absolute;
-  inset:0;
-  background: red;
-}
-</style>
 <script>
-//TODO: create content for each column individually, refactor till desired effect is got
+  //TODO: separate into components, and comment code, after that work on navbar
 import axios from 'axios';
 
 export default {

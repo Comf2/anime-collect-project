@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .main-button{
+    /*    transition-all hover:opacity-80 active:scale-110 */
+        transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+
+    }
+    .main-button:hover{
+        opacity: 0.8;
+    }
+    .main-button:active{
+        scale:1.1;
+    }
+}
